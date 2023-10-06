@@ -1,4 +1,4 @@
-# Wether-app
+# Weather-app
 
 ## Build process
 
