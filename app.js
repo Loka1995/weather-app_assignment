@@ -9,6 +9,6 @@ const API_KEY = process.env.API_KEY;
 app.use(express.static('public'));
 
 app.listen(port, () => {
-    console.log(`App listening on port http://localhost:${port}/html`);
+    console.log(`App listening on port http://localhost:${port}/`);
     console.log(API_KEY)
 });

@@ -91,7 +91,7 @@ const createCityObjects = function (cachedData) {
 
 // function to fetch city codes from the json file
 const fetchCityCodes = async function () {
-    const jsonFilePath = '/assets/cities.json';
+    const jsonFilePath = '/data/cities.json';
     const cityCodes = [];
     console.log("Trying to fetch city codes...")
     try {
