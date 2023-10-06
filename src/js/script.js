@@ -34,9 +34,7 @@ const main = async function () {
             document.querySelector('.weather-container__items').appendChild(smallCard);
         })
     } catch (error) {
-        const div = document.createElement('div');
-        div.textContent = `${error}`;
-        document.appendChild(div);
+        window.alert('Weather data cannot be retrieved at the moment!');
         console.error(error);
         console.log('Data cannot be loaded...');
     }
