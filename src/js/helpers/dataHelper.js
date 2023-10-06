@@ -78,7 +78,7 @@ export const fetchCityCodes = async function () {
 // function to cache data, data will be cached if data are older than 5 minutes
 export const cacheData = async function (cityCodes) {
     const newTime = Date.now();
-    let dataExpired = localStorage.getItem("oldTime") != null ? newTime >= Number(localStorage.getItem("oldTime")) + (1000 * 5) : false;
+    let dataExpired = localStorage.getItem("oldTime") != null ? newTime >= Number(localStorage.getItem("oldTime")) + (1000 * 60 * 5) : false;
     let localStorageIsEmpty = (localStorage.getItem("oldTime") === null) && (localStorage.getItem("cityData") === null);
     if (localStorageIsEmpty || dataExpired) {
 
