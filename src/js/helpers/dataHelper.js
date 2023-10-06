@@ -1,4 +1,4 @@
-import { OPENWEATHERMAP_ICON_URL } from '../../constants/constants.js';
+import { OPENWEATHERMAP_ICON_URL } from '../constants/constants.js';
 import { fetchDataFromAPI } from './apiHelper.js';
 import { timeAndDateFormatter } from './dateAndTimeHelper.js';
 import { capFirstLetter } from './stringHelper.js';
