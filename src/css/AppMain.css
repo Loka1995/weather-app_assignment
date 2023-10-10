@@ -10,7 +10,7 @@ span {
   text-wrap: nowrap;
 }
 
-/* .weather-container {
+.weather-container {
   min-height: calc(100vh - 3rem);
   background-color: #1f2128;
   background-image: url("/images/mainbackground.png");
@@ -30,4 +30,4 @@ span {
   .weather-container {
     background-size: contain;
   }
-} */
+}

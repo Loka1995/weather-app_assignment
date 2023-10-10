@@ -1,3 +1,8 @@
+import { AppMain } from './components/AppMain.js';
+import { AppHeader } from './components/AppHeader.js';
+import { AppFooter } from './components/AppFooter.js';
+import { AddCityForm } from './components/AddCityForm.js';
+import { WeatherItemList } from './components/WeatherItemList.js';
 import { SmallWeatherCard } from './components/SmallWeatherCard.js';
 import { LargeWeatherCard } from './components/LargeWeatherCard.js';
 import {
@@ -7,14 +12,27 @@ import {
     retrieveDataFromCache
 } from './helpers/dataHelper.js';
 
-
-
 window.addEventListener("load", () => {
     main();
 });
 
 const main = async function () {
     try {
+        const appMain = new AppMain();
+        document.body.insertAdjacentElement('afterbegin', appMain);
+
+        const appHeader = new AppHeader();
+        appMain.shadowRoot.childNodes[3].insertAdjacentElement('afterbegin', appHeader);
+        
+        const appFooter = new AppFooter();
+        document.body.insertAdjacentElement('beforeend', appFooter);
+
+        let addCity = new AddCityForm();
+        appHeader.insertAdjacentElement('afterend', addCity);
+
+        let cityList = new WeatherItemList();
+        addCity.insertAdjacentElement('afterend', cityList);
+    
         const cityCodes = await fetchCityCodes();
         await cacheData(cityCodes);
         const cachedCityWeatherData = await retrieveDataFromCache("cityData");
@@ -31,11 +49,13 @@ const main = async function () {
                 largeCard.backBtnHandler();
                 smallCard.showSmallCardList();
             })
-            document.querySelector('.weather-container__items').appendChild(smallCard);
+            cityList.shadowRoot.childNodes[3].appendChild(smallCard);
+            appMain.shadowRoot.childNodes[3].insertAdjacentElement('beforeend', largeCard);
         })
     } catch (error) {
         window.alert('Weather data cannot be retrieved!');
         console.error(error);
+        console.log(error)
         console.log('Data cannot be loaded...');
     }
 }

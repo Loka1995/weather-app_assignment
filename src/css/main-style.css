@@ -10,7 +10,7 @@ span {
   text-wrap: nowrap;
 }
 
-.weather-container {
+/* .weather-container {
   min-height: calc(100vh - 3rem);
   background-color: #1f2128;
   background-image: url("/images/mainbackground.png");
@@ -20,106 +20,9 @@ span {
   color: white;
 }
 
-.weather-container__items {
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.weather-container__header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  column-gap: 1rem;
-}
-
-.weather-container__addCity {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 2rem;
-}
-
-.weather-container__addCity input,
-.weather-container__addCity button {
-  height: 2rem;
-  border-style: none;
-}
-
-.weather-container__addCity input {
-  background-color: black;
-  padding: 0 1rem;
-  color: white;
-}
-
-.weather-container__addCity input:focus {
-  outline: none;
-}
-
-.weather-container__addCity button {
-  background-color: #6249cc;
-  color: white;
-  cursor: pointer;
-  transition: opacity 0.12s ease-in-out;
-}
-
-.weather-container__addCity button:hover {
-  opacity: 0.9;
-}
-
-.weather-footer {
-  height: 3rem;
-  background-color: #383b47;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #a4a4a7;
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .weather-container__items {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
 @media (min-width: 1025px) and (max-width: 1199px) {
   .weather-container {
     background-size: contain;
-  }
-
-  .weather-container__items {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .weather-container__addCity input,
-  .weather-container__addCity button {
-    height: 2.5rem;
-  }
-
-  .weather-container__addCity input {
-    width: 15rem;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-  }
-
-  .weather-container__addCity button {
-    width: 5rem;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
   }
 }
 
@@ -127,31 +30,4 @@ span {
   .weather-container {
     background-size: contain;
   }
-
-  .weather-container__items {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 0 10vw 1rem 10vw;
-  }
-
-  .weather-container__addCity input,
-  .weather-container__addCity button {
-    height: 2.5rem;
-  }
-
-  .weather-container__addCity input {
-    width: 15rem;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-  }
-
-  .weather-container__addCity button {
-    width: 5rem;
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-  }
-}
+} */
